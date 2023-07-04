@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HomePage</title>
+		<meta charset="UTF-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- <style>body{opacity: 0;}</style> -->
+		<link rel="stylesheet" href="css/style.min.css?_v=20230703004756" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header data-scroll="120" data-scroll-show class="header">
+				<div class="header__container">
+					<a href="#" class="header__logo">
+						<picture
+							><source srcset="img/header/logo.webp" type="image/webp" />
+							<img src="img/header/logo.png" alt="Kyiv Remont Bud"
+						/></picture>
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a data-goto-header data-goto=".main" href="#" class="menu__link">Головна</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".calc" href="#" class="menu__link">Розрахунок</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".portfolio" href="#" class="menu__link">Портфоліо</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".adventures" href="#" class="menu__link">Чому ми</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".footer" href="#" class="menu__link">Контакти</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions actions-header">
+						<a class="header__call" href="tel:+380989540950">+0989540950</a>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+					</div>
+				</div>
+			</header>
+			<main class="page">
+				<section class="page__main main">
+					<div class="main__container">
+						<h2 class="main__subtitle">Плануєш ремонт своєї квартири?</h2>
+						<h1 class="main__title">Гарантія від одного року по договору, з поетапним розрахунком, швидше термінів прописаних в договорі!</h1>
+						<div class="main__experience">Більше 10 років спеціалізуємось на ремонтно-будівельних роботах в Києві та області</div>
+						<div class="main__features">
+							<div class="main__feature">
+								<picture
+									><source srcset="img/main/list.webp" type="image/webp" />
+									<img src="img/main/list.png" alt=""
+								/></picture>
+								<p>Гарантія від 1 року по договору</p>
+							</div>
+							<div class="main__feature">
+								<picture
+									><source srcset="img/main/wallet.webp" type="image/webp" />
+									<img src="img/main/wallet.png" alt=""
+								/></picture>
+								<p>Безкоштовний виїзд замірника, та прорахунок кошторису</p>
+							</div>
+						</div>
+						<div class="main__calc">
+							<a data-goto-header data-goto=".calc" href="#" class="main__button">Прорахувати вартість</a>
+							<div class="main__caption">
+								<p>Дайте відповідь на 6 запитань, та отримай безкоштовний кошторис в подарок</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__calc calc">
+					<div class="calc__container">
+						<h2 class="calc__title">Дайте відповідь на 6 запитань, та отримай безкоштовний кошторис , та виїзд майстра на заміри</h2>
+						<form data-popup-message="#popup" action="telegram.php" method="post" class="calc__form calc-form">
+							<div class="calc__slider swiper">
+								<div class="calc-form__wrapper swiper-wrapper">
+									<div class="calc-form__slide swiper-slide">
+										<h3 class="calc-form__title">Виберіть тип вашого обєкту</h3>
+										<div class="calc__wrapper">
+											<div class="calc-form__step main-step">
+												<div class="calc-form__item">
+													<input checked type="radio" name="type" id="calc_1" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_1">
+														<p>Вторинне житло</p>
+														<picture
+															><source srcset="img/calc/secondary.webp" type="image/webp" />
+															<img src="img/calc/secondary.jpg" alt=""
+														/></picture>
+													</label>
+												</div>
+												<div class="calc-form__item">
+													<input type="radio" name="type" id="calc_2" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_2">
+														<p>Новобудова</p>
+														<picture
+															><source srcset="img/calc/new.webp" type="image/webp" />
+															<img src="img/calc/new.jpg" alt=""
+														/></picture>
+													</label>
+												</div>
+												<div class="calc-form__item">
+													<input type="radio" name="type" id="calc_3" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_3">
+														<p>Котедж</p>
+														<picture
+															><source srcset="img/calc/coteg.webp" type="image/webp" />
+															<img src="img/calc/coteg.jpg" alt="" class="koteg"
+														/></picture>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="calc-form__slide swiper-slide">
+										<h3 class="calc-form__title">Площа</h3>
+										<div class="calc-form__step item-main">
+											<div class="calc-form__item">
+												<input type="range" class="input_range" name="meters" id="range" min="1" max="100" oninput="showValue()" />
+												<label for="range" id="rangeValue">50 метрів квадтраних</label>
+											</div>
+										</div>
+									</div>
+									<div class="calc-form__slide swiper-slide">
+										<h3 class="calc-form__title">Вкажіть кількість кімнат</h3>
+										<div class="calc-form__step item-main">
+											<div class="calc-form__item">
+												<div data-quantity class="quantity">
+													<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+													<div class="quantity__input">
+														<input data-quantity-value autocomplete="off" type="text" name="quantity" value="1" />
+													</div>
+													<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="calc-form__slide swiper-slide">
+										<h3 class="calc-form__title">Чи будемо робити ремонт по дизайн проекту?</h3>
+										<div class="calc__wrapper">
+											<div class="calc-form__step">
+												<div class="calc-form__item">
+													<input type="radio" name="design" id="calc_5" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_5"> Так, у мене є дизайн проект </label>
+												</div>
+												<div class="calc-form__item">
+													<input checked type="radio" name="design" id="calc_4" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_4"> Ні, без дизайн-проекту </label>
+												</div>
+
+												<div class="calc-form__item">
+													<input type="radio" name="design" id="calc_6" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_6"> Мені потрібен дизайн проект </label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="calc-form__slide swiper-slide">
+										<h3 class="calc-form__title">Як швидко вам потрібен ремонт?</h3>
+										<div class="calc__wrapper">
+											<div class="calc-form__step">
+												<div class="calc-form__item">
+													<input checked type="radio" name="speed" id="calc_7" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_7">Протягом тижня</label>
+												</div>
+												<div class="calc-form__item">
+													<input type="radio" name="speed" id="calc_8" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_8">Протягом місяця</label>
+												</div>
+												<div class="calc-form__item">
+													<input type="radio" name="speed" id="calc_9" class="calc-form__input radio_input" />
+													<label class="calc-form__label radio_label" for="calc_9">Не принципово</label>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-wrapper__button">
+											<button type="submit" class="button__finish">Надіслати</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-button__wrapper">
+									<button type="button" class="swiper-button-prev">Назад</button>
+									<button type="button" class="swiper-button-next">Вперед</button>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</form>
+					</div>
+					<div id="popup" class="popup">
+						<div class="popup__body">
+							<div class="popup__content">
+								<div class="popup__title">Дякуємо за пройдене опитування.</div>
+								<div class="popup__text">
+									<p></p>
+									Вкажіть будь ласка вашу контактну інформацію, щоб дізнатися вартість вашого ремонту!
+								</div>
+								<form class="send__form" action="#">
+									<div class="send__form-feedback feedback-calc">
+										<div class="feedback-calc__item">
+											<input
+												data-validate
+												autocomplete="off"
+												type="text"
+												name="form[name]"
+												placeholder="Ім'я"
+												data-required
+												class="feedback-calc__input input"
+											/>
+										</div>
+										<div class="feedback-calc__item">
+											<input
+												data-validate
+												autocomplete="off"
+												type="tel"
+												name="form[tel]"
+												placeholder="+380"
+												data-required
+												class="feedback-calc__input input"
+												oninput="handleInput(event)"
+												onkeydown="handleKeyDown(event)"
+											/>
+										</div>
+										<button type="submit" class="feedback-calc__button">Надіслати</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__portfolio portfolio">
+					<div class="portfolio__container">
+						<h2 class="portfolio__title">З 2013 року ми реалізували більше 100 ремонтно будівельних робіт</h2>
+						<div class="portfolio__slider swiper">
+							<div class="portfolio__wrapper swiper-wrapper">
+								<div class="portfolio__slide swiper-slide">
+									<div class="portfolio__object object-portfolio">
+										<div class="object-portfolio__images">
+											<div class="object-portfolio__img-wr-ibg">
+												<img src="img/portfolio/01/cabinet.webp" alt="" class="large-image" />
+											</div>
+											<div class="object-portfolio__images--container">
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/01/cabinet.webp" alt="Кабінет" class="thumbnail" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/01/corridor.webp" alt="Коридор" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/01/hall.webp" alt="Кімната" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/01/kitchen.webp" alt="Кухня" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/01/toilet.webp" alt="Туалет" onclick="selectImage(this)" />
+												</div>
+											</div>
+										</div>
+										<div class="object-portfolio__content">
+											<h3 class="object-portfolio__title">ЖК: 52 Перлина</h3>
+											<div class="object-portfolio__type">Тип житла: Новобудова</div>
+											<div class="object-portfolio__area">Площа: 44 м2</div>
+											<div class="object-portfolio__deadilne">Термін виконання: 2,5 місяці</div>
+										</div>
+									</div>
+								</div>
+								<div class="portfolio__slide swiper-slide">
+									<div class="portfolio__object object-portfolio">
+										<div class="object-portfolio__images">
+											<div class="object-portfolio__img-wr-ibg">
+												<img src="img/portfolio/02/cabinet.webp" alt="" class="large-image" />
+											</div>
+											<div class="object-portfolio__images--container">
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/02/cabinet.webp" alt="Кабінет" class="thumbnail" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/02/room.webp" alt="Кімната" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/02/kitchen.webp" alt="Кухня" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/02/toilet.webp" alt="Туалет" onclick="selectImage(this)" />
+												</div>
+											</div>
+										</div>
+										<div class="object-portfolio__content">
+											<h3 class="object-portfolio__title">Офісний центр «38 Перлина (Kadorr)”</h3>
+											<div class="object-portfolio__type">Тип житла: Новобудова</div>
+											<div class="object-portfolio__area">Площа: 50 м2</div>
+											<div class="object-portfolio__deadilne">Термін виконання: 3 місяці</div>
+										</div>
+									</div>
+								</div>
+								<div class="portfolio__slide swiper-slide">
+									<div class="portfolio__object object-portfolio">
+										<div class="object-portfolio__images">
+											<div class="object-portfolio__img-wr-ibg">
+												<img src="img/portfolio/03/bedroom.webp" alt="" class="large-image" />
+											</div>
+											<div class="object-portfolio__images--container">
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/03/corridor.webp" alt="Кабінет" class="thumbnail" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/03/hall.webp" alt="Кімната" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/03/kitchen.webp" alt="Кухня" onclick="selectImage(this)" />
+												</div>
+												<div class="object-portfolio__image-ibg">
+													<img src="img/portfolio/03/room.webp" alt="Туалет" onclick="selectImage(this)" />
+												</div>
+											</div>
+										</div>
+										<div class="object-portfolio__content">
+											<h3 class="object-portfolio__title">Однокімнатна квартира ЖК: Файна Таун</h3>
+											<div class="object-portfolio__type">Тип житла: Новобудова</div>
+											<div class="object-portfolio__area">Площа: 38 м2</div>
+											<div class="object-portfolio__deadilne">Термін виконання: 2,5 місяці</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+								function selectImage(element) {
+									let parentContainer = element.closest(".portfolio__slide");
+									let thumbnails = parentContainer.querySelectorAll(".thumbnail");
+									let largeImage = parentContainer.querySelector(".large-image");
+
+									// Змінити шлях великого зображення на шлях обраної мініатюри
+									largeImage.src = element.src;
+									largeImage.alt = element.alt;
+
+									// Зняти виділення з усіх мініатюр
+									thumbnails.forEach(function (thumbnail) {
+										thumbnail.classList.remove("thumbnail");
+									});
+
+									// Виділити обрану мініатюру
+									element.classList.add("thumbnail");
+								}
+							</script>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+				<section class="page__adventures adventures">
+					<div class="adventures__container">
+						<h2 class="adventures__title">Чому ми найкращий ваш вибір!</h2>
+						<!-- Частина слайдера, що рухається -->
+						<div class="adventures__wrapper">
+							<!-- Слайд -->
+							<div class="adventures__slide swiper-slide slider-adventures">
+								<h4 class="slider-adventures__title">Досвід</h4>
+								<div class="slider-adventures__text">
+									<p>За 10 років існування, ми реалізували білшьше 100 ремонтно будівельних робіт будь-якої складності</p>
+								</div>
+							</div>
+							<div class="adventures__slide swiper-slide">
+								<h4 class="slider-adventures__title">10% знижки на матеріали</h4>
+								<div class="slider-adventures__text">
+									<p>
+										Ми розвинули міцні партнерські зв'язки з багатьма постачальниками матеріалів. Це дозволяє нам отримувати матеріали за
+										оптовими цінами
+									</p>
+								</div>
+							</div>
+							<div class="adventures__slide swiper-slide">
+								<h4 class="slider-adventures__title">Комплексний підхід</h4>
+								<div class="slider-adventures__text">
+									<p>Індивідуальне планування квартир, детальні 3D візуалізації Послуга комплектації матеріалами та меблями</p>
+								</div>
+							</div>
+							<div class="adventures__slide swiper-slide">
+								<h4 class="slider-adventures__title">Дизайн інтер'єру</h4>
+								<div class="slider-adventures__text">
+									<p>Розробка індивідуального дизайн-проекту чи кілька нестандартних варіантів-концепцій на вибір</p>
+								</div>
+							</div>
+							<div class="adventures__slide swiper-slide">
+								<h4 class="slider-adventures__title">Фотозвіти</h4>
+								<div class="slider-adventures__text">
+									<p>Весь процес ремонту ви контролюєте віддалено. Надсилаємо детальний фотозвіт про виконану роботу</p>
+								</div>
+							</div>
+							<div class="adventures__slide swiper-slide">
+								<h4 class="slider-adventures__title">Виготовлення меблів на замовлення</h4>
+								<div class="slider-adventures__text">
+									<p>Наша команда майстрів здійснить ваші мрії про прекрасний і стильний інтер'єр</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__items">
+						<div class="footer__main">
+							<div class="footer__item item-footer">
+								<h2 class="footer__title">Довірте свій ремонт професіоналам</h2>
+								<a href="home.html" class="footer__logo"
+									><picture
+										><source srcset="img/header/logo.webp" type="image/webp" />
+										<img src="img/header/logo.png" alt="" /></picture
+								></a>
+								<div class="item-footer__licanse">
+									<a href="#">Всі права захищені</a>
+								</div>
+							</div>
+							<div class="footer__item item-footer">
+								<h5 class="item-footer__title">Контакти</h5>
+								<div class="item-footer__phone">
+									<a href="tel:0989540950">+0989540950</a>
+								</div>
+								<div class="item-footer__messenger">
+									<a href="#" class="item-footer__telegram">
+										<img src="img/icons/telegram.svg" alt="" />
+									</a>
+									<a href="#" class="item-footer__viber">
+										<picture
+											><source srcset="img/icons/viber.webp" type="image/webp" />
+											<img src="img/icons/viber.png" alt=""
+										/></picture>
+									</a>
+								</div>
+							</div>
+							<div class="footer__item item-footer">
+								<div class="item-footer__title">Aдpeca</div>
+								<div class="item-footer__location">01032, Byл Жилянська 11 офіс 409 Київ , Україна</div>
+							</div>
+						</div>
+
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325518.68780316407!2d30.252511957059642!3d50.4016990487754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1688275536925!5m2!1suk!2sua"
+							width="600"
+							height="450"
+							style="border: 0"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="js/app.min.js?_v=20230703004756"></script>
+		<script>
+			function showValue() {
+				var value = document.getElementById("range").value;
+				var rangeValue = document.getElementById("rangeValue");
+
+				if (value >= 100) {
+					rangeValue.innerText = "100+ метрів квадратних";
+				} else {
+					rangeValue.innerText = value + " метрів квадратних";
+				}
+			}
+		</script>
+		<script>
+			function handleInput(event) {
+				var input = event.target;
+				var start = input.selectionStart;
+				var end = input.selectionEnd;
+				var value = input.value;
+
+				// Remove any non-digit characters
+				var digitsOnly = value.replace(/\D/g, "");
+
+				// Add the "+380" prefix if not already present
+				if (!digitsOnly.startsWith("380")) {
+					digitsOnly = "380" + digitsOnly;
+				}
+
+				// Limit the input to a maximum of 13 characters (including prefix)
+				if (digitsOnly.length > 13) {
+					digitsOnly = digitsOnly.slice(0, 13);
+				}
+
+				// Update the input value
+				input.value = digitsOnly;
+
+				// Adjust the cursor position
+				var newStart = start + (digitsOnly.length - value.length);
+				var newEnd = end + (digitsOnly.length - value.length);
+				input.setSelectionRange(newStart, newEnd);
+			}
+
+			function handleKeyDown(event) {
+				var input = event.target;
+				var start = input.selectionStart;
+				var end = input.selectionEnd;
+				var value = input.value;
+
+				// Prevent deletion of the "+380" prefix
+				if (start < 4 && (event.key === "Backspace" || event.key === "Delete")) {
+					event.preventDefault();
+
+					// Adjust the cursor position
+					input.setSelectionRange(4, end);
+				}
+
+				// Remove the "+" if it appears at the beginning
+				if (start === 0 && value.startsWith("+")) {
+					input.value = value.slice(1);
+
+					// Adjust the cursor position
+					input.setSelectionRange(0, end - 1);
+				}
+			}
+		</script>
+	</body>
+</html>
